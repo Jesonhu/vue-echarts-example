@@ -17,5 +17,6 @@ import 'echarts/lib/chart/funnel' // series3
 import 'echarts/lib/component/title' // basic1
 import 'echarts/lib/component/tooltip'
 import 'echarts/lib/component/legend'
+import 'echarts/lib/component/tooltip'
 
 Vue.component('v-echarts', VueEcharts);
