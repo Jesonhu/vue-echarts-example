@@ -13,7 +13,11 @@ const routerNameMap = {
 
   // 漏斗图
   funnel: 'funnel',
-  funnel1: 'funnel1'
+  funnel1: 'funnel1',
+
+  chart_card: 'chart_card',
+  cc_basic: 'chart_card_basic',
+  cc_min_area: 'chart_card_min_area'
 }
 
 export default {

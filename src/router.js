@@ -69,6 +69,21 @@ export default new Router({
           component: () => import('@/views/funnel/children/funnel1')
         }
       ]
+    },
+
+    // cart_card
+    {
+      path: '/chart-card',
+      name: CONFIG.routerNameMap.chart_card,
+      component: () => import('@/views/chart-card'),
+      children: [
+        {
+          path: 'basic',
+          name: CONFIG.routerNameMap.cc_basic,
+          name: { title: '基本使用' },
+          component: () => import('@/views/chart-card/children/basic')
+        }
+      ]
     }
   ]
 })
