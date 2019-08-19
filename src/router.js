@@ -21,7 +21,7 @@ export default new Router({
       component: () => import('@/views/pie'),
       children: [
         {
-          path: 'basic',
+          path: 'example1',
           name: 'pieBasic',
           meta: { title: '基本饼状图' },
           component: () => import('@/views/pie/children/basic')
@@ -52,6 +52,12 @@ export default new Router({
           name: CONFIG.routerNameMap.bar2,
           meta: { title: '堆叠柱状图' },
           component: () => import('@/views/bar/children/bar2')
+        },
+        {
+          path: 'example3',
+          name: CONFIG.routerNameMap.bar3,
+          meta: { title: 'dataset 柱状图' },
+          component: () => import('@/views/bar/children/bar3')
         }
       ]
     },

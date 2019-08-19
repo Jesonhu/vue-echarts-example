@@ -21,7 +21,7 @@ export const basic = {
     itemWidth: 10,
     itemHeight: 10,
     data: [
-      { name: 'run', icon: 'rect', textStyle: { width: '8', height: '8' }},
+      { name: 'run', icon: 'rect' },
       { name: 'stop', icon: 'rect' },
       { name: 'error', icon: 'rect' },
     ],
@@ -179,3 +179,115 @@ export const barMack2 = {
     }
   ]
 }
+
+export const noDataset = {
+  title: {
+    name: '未使用dataset'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    },
+    extraCssText: 'text-align: left'
+  },
+  legend: {
+    bottom: 8,
+    data: [
+      { name: 'run', icon: 'circle' },
+      { name: 'stop', icon: 'circle' },
+      { name: 'error', icon: 'circle' }
+    ],
+    itemWidth: 8,
+    itemHeight: 8,
+    inactiveColor: '#C3C3C3'
+  },
+  xAxis: {
+    type: 'category',
+    data : ['某昌', '某口', '某阳', '某西湖']
+  },
+  yAxis: {},
+  series: [
+    {
+      type: 'bar',
+      name: 'run',
+      itemStyle: {
+        color: '#3AA1FF'
+      },
+      data: [300, 300, 300, 300],
+    },
+    {
+      type: 'bar',
+      name: 'stop',
+      itemStyle: {
+        color: '#4ECB73'
+      },
+      data: [150, 150, 150, 150],
+    },
+    {
+      type: 'bar',
+      name: 'error',
+      itemStyle: {
+        color: '#FBD437'
+      },
+      data: [100, 100, 100, 100],
+    },
+  ]
+}
+
+const commonData = [
+  ['某昌', 300, 150, 100],
+  ['某口', 300, 150, 100],
+  ['某阳', 300, 150, 100],
+  ['某西湖', 300, 150, 100]
+]
+
+export const dataset = {
+  title: {
+    name: 'dataset 方式'
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'shadow'
+    },
+    extraCssText: 'text-align: left'
+  },
+  dataset: {
+    dimensions: ['location', 'run', 'stop', 'error'],
+    source: commonData
+  },
+  legend: {
+    bottom: 8,
+    itemWidth: 8,
+    itemHeight: 8,
+    inactiveColor: '#C3C3C3'
+  },
+  xAxis: {
+    type: 'category',
+  },
+  yAxis: {},
+  series: [
+    {
+      type: 'bar',
+      itemStyle: {
+        color: '#3AA1FF'
+      },
+    },
+    {
+      type: 'bar',
+      itemStyle: {
+        color: '#4ECB73'
+      },
+    },
+    {
+      type: 'bar',
+      itemStyle: {
+        color: '#FBD437'
+      }
+    },
+  ]
+}
+
+
+

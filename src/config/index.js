@@ -10,6 +10,7 @@ const routerNameMap = {
   bar: 'bar',
   bar1: 'bar1',
   bar2: 'bar2',
+  bar3: 'bar3',
 
   // 漏斗图
   funnel: 'funnel',
