@@ -17,8 +17,7 @@
           </div>
         </div>
         <div class="cart-card__head-total" v-if="this.$slots.total">
-          <slot name="total">
-          </slot>
+          <slot name="total"></slot>
         </div>
       </div>
     </div>
