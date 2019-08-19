@@ -84,7 +84,7 @@ export default new Router({
       component: () => import('@/views/chart-card'),
       children: [
         {
-          path: 'basic',
+          path: 'example1',
           name: CONFIG.routerNameMap.cc_basic,
           name: { title: '基本使用' },
           component: () => import('@/views/chart-card/children/basic')

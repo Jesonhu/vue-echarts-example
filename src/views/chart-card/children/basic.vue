@@ -7,14 +7,23 @@
       title="泵房统计"
       :total="total"
     >
-      <a-tooltip title="泵房统计" slot="action">
-        <a-icon type="info-circle-o" />
-      </a-tooltip>
+      <template v-slot:action>
+        <a-tooltip title="泵房统计">
+          <a-icon type="info-circle-o" />
+        </a-tooltip>
+      </template>
+      <template v-slot:total>
+        <span>
+          {{total}}
+        </span>
+      </template>
       <div class="trend-group">
         <trend style="margin-right: 16px;" flag="up" name="周同比" value="12"></trend>
         <trend flag="down" name="日同比" value="11"></trend>
       </div>
-      <div slot="footer">日均增长<span>23</span></div>
+      <template v-slot:footer>
+        <div>日均增长<span>23</span></div>
+      </template>
     </chart-card>
 
     <chart-card
@@ -24,13 +33,17 @@
       :title="title"
       :total="total"
     >
-      <a-tooltip title="指标说明" slot="action">
-        <a-icon type="info-circle-o" />
-      </a-tooltip>
+      <template v-slot:action>
+        <a-tooltip title="指标说明">
+          <a-icon type="info-circle-o" />
+        </a-tooltip>
+      </template>
       <div class="trend-group">
         <TrendGroup :trend="trend"/>
       </div>
-      <div slot="footer">日均销售额<span>￥ 234.56</span></div>
+      <template v-slot:footer>
+        <div>日均销售额<span>￥ 234.56</span></div>
+      </template>
     </chart-card>
 
     <chart-card
@@ -39,22 +52,33 @@
       :loading="loading"
       :title="title"
       :total="total"
-    >
-      <div slot="avatar">
-        <img
-          alt="indicator"
-          width="60"
-          height="60"
-          src="https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png"
-        />
-      </div>
-      <a-tooltip title="指标说明" slot="action">
-        <a-icon type="info-circle-o" />
-      </a-tooltip>
+    > 
+      <template v-slot:avatar>
+        <div>
+          <img
+            alt="indicator"
+            width="60"
+            height="60"
+            src="https://gw.alipayobjects.com/zos/rmsportal/dURIMkkrRFpPgTuzkwnB.png"
+          />
+        </div>
+      </template>
+      <template v-slot:total>
+        <span>
+          {{total}}
+        </span>
+      </template>
+      <template v-slot:action>
+        <a-tooltip title="指标说明">
+          <a-icon type="info-circle-o" />
+        </a-tooltip>
+      </template>
       <div class="trend-group">
         <TrendGroup :trend="trend"/>
       </div>
-      <div slot="footer">日均销售额<span>￥ 234.56</span></div>
+      <template v-slot:footer>
+        <div>日均销售额<span>￥ 234.56</span></div>
+      </template>
     </chart-card>
   </a-row>
 </template>
